@@ -1,14 +1,13 @@
 import React from 'react';
 import { Button, View, StyleSheet } from 'react-native';
 
-const fetchLocation = props => {
+const fetchWashParkLocation = props => {
     return  (
-    <View style={styles.button}>
-    <Button title="Go to my location" onPress={props.onSetLocation} />
-    </View>
+        <View style={styles.button}>
+        <Button title="Wash Park" onPress={props.onSetLocation2} />
+        </View>
     );
 };
-
 const styles = StyleSheet.create({
     button: {
     zIndex: 10,
@@ -17,5 +16,4 @@ const styles = StyleSheet.create({
     paddingTop: 25,
     }
 });
-
-export default fetchLocation;
+export default fetchWashParkLocation;

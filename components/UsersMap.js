@@ -16,9 +16,9 @@ const usersMap = props => {
         <MapView onPress={(event)=> {console.log(event)}
         }
         initialRegion={{latitude: 39.757757,
-            longitude: -105.006839,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
+            longitude: -155.006839,
+            latitudeDelta: 45.015,
+            longitudeDelta: 45.0121,
         }}
         region={props.userLocation}
         style={styles.map}> 
@@ -30,14 +30,10 @@ const usersMap = props => {
 };
 
 const styles = StyleSheet.create({
-    mapContainer: {
-        width: '100%',
-        height: '75%',
-        marginTop: 20
-    },
     map: {
         width: '100%',
-        height: '100%',
+        height: 250,
+        zIndex: -1,
     }
 })
 
