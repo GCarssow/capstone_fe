@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, View, StyleSheet } from 'react-native';
 
-const fetchCityParkLocation = props => {
+const fetchCentralParkLocation = props => {
     return  (
         <View>
-        <Button title="City Park" onPress={props.onSetLocation1} />
+        <Button title="Central Park" onPress={props.onSetLocation4} />
         </View>
     );
 };
@@ -14,9 +14,6 @@ const fetchCityParkLocation = props => {
 //     zIndex: 10,
 //     alignItems: 'center',
 //     justifyContent: 'center',
-//     width: 400,
-//     backgroundColor: 'blue'
 //     }
 // });
-
-export default fetchCityParkLocation;
+export default fetchCentralParkLocation;

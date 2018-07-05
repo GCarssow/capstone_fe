@@ -10,7 +10,7 @@ const usersMap = props => {
     if (props.userLocation) {
         userLocationMarker = <MapView.Marker coordinate={props.userLocation} />
     }
-    <MapView.Marker coordinate={props.userLocation} />
+    // <MapView.Marker coordinate={props.userLocation} />
     return (
         <View style={styles.mapContainer}>
         <MapView onPress={(event)=> {console.log(event)}

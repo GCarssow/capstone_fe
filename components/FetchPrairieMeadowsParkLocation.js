@@ -3,19 +3,18 @@ import { Button, View, StyleSheet } from 'react-native';
 
 const fetchPrairieMeadowsParkLocation = props => {
     return  (
-        <View style={styles.button}>
+        <View>
         <Button title="Prairie Meadows Park" onPress={props.onSetLocation3} />
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    button: {
-    zIndex: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 25,
-    }
-});
+// const styles = StyleSheet.create({
+//     button: {
+//     zIndex: 10,
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     }
+// });
 
 export default fetchPrairieMeadowsParkLocation;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Header, Icon, Content, Form, Item, Picker } from 'native-base';
-
+import { Container, Header, Icon, Content, Form, Item, Picker, View } from 'native-base';
+import FetchCityParkLocation from './FetchCityParkLocation'
 
 export default class DropDown extends Component {
     constructor(props) {
@@ -15,6 +15,57 @@ export default class DropDown extends Component {
     });
   }
 
+  getUserLocationHandler = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+    this.setState({
+      userLocation: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121,
+      }
+    })
+    }, err => console.log(err));
+  }
+  
+  getUserLocationHandler1 = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+    this.setState({
+      userLocation: {
+        latitude: 39.7459,
+        longitude: -104.9476,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121,
+      }
+    })
+    }, err => console.log(err));
+  }
+  
+  getUserLocationHandler2 = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+    this.setState({
+      userLocation: {
+        latitude: 39.6984,
+        longitude: -104.9696,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121,
+      }
+    })
+    }, err => console.log(err));
+  }
+  
+  getUserLocationHandler3 = () => {
+    navigator.geolocation.getCurrentPosition(position => {
+    this.setState({
+      userLocation: {
+        latitude: 39.7928,
+        longitude: -104.8921,
+        latitudeDelta: 0.015,
+        longitudeDelta: 0.0121,
+      }
+    })
+    }, err => console.log(err));
+  }
 
   render() {
     return (
@@ -33,7 +84,7 @@ export default class DropDown extends Component {
                 selectedValue={this.state.selected2}
                 onValueChange={this.onValueChange2.bind(this)}
               >
-                <Picker.Item label="City Park" value="key0" />
+                <Picker.Item label="City Park" onPress={<FetchCityParkLocation onSetLocation1={this.getUserLocationHandler1}/>}/>
                 <Picker.Item label="Wash Park" value="key1" />
                 <Picker.Item label="Praire Meadows Park" value="key1" />
               </Picker>
@@ -46,7 +97,9 @@ export default class DropDown extends Component {
 }
 
 
-
+{/* <FetchCityParkLocation onSetLocation1={this.getUserLocationHandler1} />
+          <FetchWashParkLocation onSetLocation2={this.getUserLocationHandler2} />
+          <FetchPrairieMeadowsParkLocation onSetLocation3={this.getUserLocationHandler3} /> */}
 
 
 // import React, { Component } from "react";
